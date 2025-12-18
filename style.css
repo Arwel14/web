@@ -1,0 +1,709 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+/* content range */
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* =================HEADER======================= */
+#menu-toggle {
+    display: none;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    background: rgba(94,91,91,0.6);
+    backdrop-filter: blur(6px);
+    z-index: 10;
+}
+
+.header-container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 60px;
+
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.icons img {
+    width: 30px;
+    height: 30px;
+    margin-inline: 20px;
+}
+
+/* БЛОКУЄМО СКРОЛ, ЯКЩО МЕНЮ ВІДКРИТЕ */ 
+/* #menu-toggle:checked ~ .mobile-menu {
+    display: flex;
+}
+#menu-toggle:checked ~ .mobile-menu,
+#menu-toggle:checked ~ * {
+    overflow: hidden;
+} */
+
+/* Ховаємо чекбокс
+#menu-toggle {
+    display: none;
+}
+
+/* Бургер */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+.burger span {
+    width: 30px;
+    height: 3px;
+    background: white;
+}
+
+/* Мобільне меню */
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.95);
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+    padding: 90px 30px 40px;
+    z-index: 999;
+}
+
+/* Пункти меню */
+.mobile-menu a {
+    font-size: 26px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+/* Кнопка закриття */
+.close-menu {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* =========================hero=================== */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* left side */
+.hero-left h1 {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.hero-stats {
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+}
+
+/* right side */
+.hero-right {
+    text-align: right;
+}
+
+.btn-call {
+    margin-top: 20px;
+    background: #00e6e6;
+    color: #000;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+}
+
+/* arrow */
+.arrow-bg {
+    position: absolute;
+    bottom: 30px;
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.arrow-bg img {
+    width: 70px;
+}
+
+
+/* =====================HOT PROPOSE ============================ */
+.hot-section {
+   background: linear-gradient(
+    180deg,      
+    #000 0%,    
+    #00e6e6 50%,
+    #000 100% 
+);
+
+}
+
+.title_h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.card {
+    width: 260px;
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.card-img img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.card-bottom {
+    margin-top: 10px;
+}
+
+/* ==========================SUPPLEMENTS =============================== */
+.supplements-section {
+
+    background: linear-gradient(
+    180deg,      
+    #000 10%,    
+    #00e6e6 50%,
+    #000 100%   );
+  
+}
+
+.supplements {
+    display: flex;
+    gap: 40px;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+.supp-img {
+    background: #fff;
+    padding: 12px;
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.supp-img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    object-fit: contain; 
+}
+
+/* ========================Why trust us ============================ */
+.trust-section {
+    background: linear-gradient(
+    180deg,      
+    #000 10%,    
+    #00e6e6 50%,
+    #000 100%   );
+  padding: 60px 0;
+}
+
+.trust-wrap{
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.trust-row{
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  width: 100%;
+}
+
+.trust-row--left{
+  justify-content: flex-start;
+}
+
+.trust-row--right{
+  justify-content: flex-end;
+}
+
+.trust-card{
+  width: 360px;
+  height: 190px;
+  padding: 14px;
+  border-radius: 22px;
+
+  background: rgba(255,255,255,0.12);
+  box-shadow:
+    0 0 0 4px rgba(255,255,255,0.75),
+    0 0 35px rgba(0, 255, 255, 0.35);
+
+  flex: 0 0 auto;
+}
+
+.trust-card img{
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.trust-text{
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5;
+  font-size: 14px;
+  max-width: 420px;
+  margin: 0;
+}
+
+.trust-text--right{ text-align: left; }
+
+.trust-text--left{ text-align: left; }
+
+.trust-text--center{
+  max-width: 560px;
+  align-self: center;     
+  text-align: center;
+}
+
+/* Parteners */
+.partners{
+  display:flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.partners img{
+  width: 110px;
+  height: 40px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.9;
+}
+
+
+
+/* ==============================REVIEWS =============================== */
+.reviews-section{
+
+background: linear-gradient(
+    180deg,      
+    #000 0%,    
+    #00e6e6 50%,
+    #000 100%   
+    );
+
+}
+.reviews-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 200px; 
+    padding-top: 40px;
+}
+.review-pic{
+    width: 200px;
+    height: 200px;
+
+}
+.review-card {
+    width: 520px;
+    background: #111;
+    color: #fff;
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+    transform-origin: center;
+}
+
+.review-card:nth-child(1) { transform: rotate(7deg); }
+.review-card:nth-child(2) { transform: rotate(-7deg); }
+.review-card:nth-child(3) { transform: rotate(7deg); }
+.review-card:nth-child(4) { transform: rotate(-7deg); }
+
+
+/* ====================== CONTACT SECTION/FAQ===================== */
+
+.contact-section {
+    position: relative;
+    width: 100%;
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+.contact-section .contact-bg img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+/* LEFT FORM */
+.contact-left {
+    width: 50%;
+}
+
+.contact-left h2 {
+    margin-bottom: 30px;
+}
+
+
+.contact-left form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-left input,
+.contact-left textarea {
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 25px;
+    border: none;
+    background: rgba(255,255,255,0.9);
+}
+
+.btn-main {
+    width: 150px;
+    background: #00e6e6;
+    color: black;
+    padding: 12px;
+    border-radius: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* FAQ */
+.contact-right {
+    width: 50%;
+}
+
+.contact-right h2 {
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 18px;
+}
+
+.faq-question {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 12px 50px 12px 18px;
+    border-radius: 25px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+}
+
+
+.faq-question .icon {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.faq-item input { 
+    display: none; 
+}
+.faq-item input + .faq-question .icon {
+    background-image: url("img/svg/plus.svg");
+}
+
+.faq-item input:checked + .faq-question .icon {
+    background-image: url("img/svg/minus.svg");
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding-left: 18px;
+    transition: 0.3s ease;
+}
+
+.faq-item input:checked ~ .faq-answer {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 8px;
+}
+
+/* ===========FOOTER============= */
+.footer {
+    background: #000;
+    padding: 60px 0 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.footer-col a:hover{
+
+    color:rgb(71, 72, 76);
+}
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+}
+.footer-col a {
+    color: #00e6e6; ;          
+    text-decoration: none;   
+    font-size: 14px;         
+    transition: 0.3s;        
+}
+
+@media (max-width: 768px) {
+    /*base*/
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .reviews-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px; 
+    padding-top: 40px;
+}
+/*=========================header=========================*/
+    .nav{
+        display: none;
+    }
+    .burger {
+        display: flex;
+    }
+    .header-container {
+        position: relative;
+    }
+    
+    
+    body.menu-open {
+        overflow: hidden;
+    }
+    #menu-toggle:checked ~ .mobile-menu {
+        display: flex;
+    }
+    #menu-toggle:checked ~ .mobile-menu .close-menu {
+        display: block;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.95);
+        display: none;
+        flex-direction: column;
+        padding: 90px 30px 40px;
+        gap: 30px;
+    }
+
+    .close-menu {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 40px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .menu-link {
+        font-size: 26px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .mobile-menu label {
+        cursor: pointer;
+    }
+
+
+/*=======================hero=====================*/
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-right {
+        align-items: center;
+    }
+
+    .arrow-bg {
+        bottom: 20px;
+    }
+
+    .trust-cards,
+    .contact-wrapper,
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+/*=======================Why tryst us=====================*/
+  
+  .trust-row{
+    flex-direction: column;      
+    align-items: flex-start;
+  }
+
+
+  .trust-row--right{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .trust-card{
+    width: 100%;
+    height: 220px;
+    max-width: none;           
+  }
+
+  .trust-text{
+    max-width: 100%;
+  }
+
+ /*=======================Contact/FAQ=====================*/
+     .contact-section {
+        padding: 60px 0;
+    }
+
+    /* us inquiry */
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+
+    /*FAQ*/
+    .faq-question {
+         font-size: 13px;
+        padding: 12px 45px 12px 18px;
+    }
+    .reviews-wrap { height: auto; }
+    .review-card {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+/*===========================footer===============================*/
+    .footer-line {
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        margin: 20px 0; 
+        z-index: 100;
+    }
+    #logo_footer{
+    height: 100px;
+    width: 200px;
+    /* Додай це: */
+    display: block;
+    margin: 0 auto;
+    }
+}
